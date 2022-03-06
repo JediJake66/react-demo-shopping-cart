@@ -1,5 +1,6 @@
 import { Button, Card } from 'react-bootstrap';
 
+import Rating from './Rating';
 import React from 'react';
 
 const SingleProduct = ({ product }) => {
@@ -16,7 +17,7 @@ const SingleProduct = ({ product }) => {
               <div>1 day delivery</div> :
               <div>3+ day delivery</div>
             }
-            <div>{product.ratings}</div>
+            <Rating rating={product.ratings} />
           </Card.Subtitle>
           <Button
             onClick={() => console.log("REMOVE")}
